@@ -143,6 +143,11 @@ section p {
 img {
     width: 200px;
 }
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .home-content img {
     width: 180px;
     height: 180px;
