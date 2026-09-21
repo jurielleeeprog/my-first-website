@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+}
+
+nav h2 {
+    font-size: 24px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+}
+
+
+/* HOME */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background-color: #f8f6f2;
+
+    padding: 40px 20px;
+}
+
+#home h1 {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+#home h2 {
+    font-weight: normal;
+    color: #666;
+}
+
+#home p {
+    max-width: 600px;
+    margin: 25px auto;
+    line-height: 1.6;
+}
+
+
+/* BUTTON */
+
+.button {
+    display: inline-block;
+
+    background-color: #222;
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+section h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+/* SERVICES */
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 280px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background-color: #f5f5f5;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 15px;
+}
+
+
+/* CONTACT */
+
+#contact {
+    background-color: #f8f6f2;
+}
+img {
+    width: 200px;
+}
