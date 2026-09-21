@@ -143,3 +143,10 @@ section p {
 img {
     width: 200px;
 }
+.home-content img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+}
