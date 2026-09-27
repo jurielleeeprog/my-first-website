@@ -187,6 +187,7 @@ img {
     background: none;
     border: none;
     cursor: pointer;
+    padding: 5px;
 }
 @media (max-width: 768px) {
 
