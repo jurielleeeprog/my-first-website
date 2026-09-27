@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jurielle | Virtual Assistant</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigation -->
     <nav>
-        <h2>Jurielle</h2>
+    <h2>Jurielle</h2>
 
-        <div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+
+        <button id="darkModeButton">🌙 Dark Mode</button>
+    </div>
+</nav>
 
 
     <!-- Home -->
@@ -28,7 +31,7 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <img src="image/myphoto.jpg" alt="My Picture">
 
         <h1>Hi, I'm jurielle 👋</h1>
 
@@ -104,12 +107,18 @@
             Interested in working with me?
         </p>
 
-        <a href="mailto:jurielleee@gmail.com" class="button">
+        <a href="#contact" class="button" id="hireButton">Hire Me</a>
             Contact Me
         </a>
 
     </section>
+<footer>
+    <p>© <span id="year"></span> Jurielle. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
