@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -33,12 +36,18 @@ nav a {
     text-decoration: none;
     color: #333;
     margin-left: 25px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #888;
 }
 
 
 /* HOME */
 
+
 #home {
+    
     min-height: 90vh;
 
     display: flex;
@@ -73,15 +82,16 @@ nav a {
 
 .button {
     display: inline-block;
-
     background-color: #222;
     color: white;
-
     padding: 14px 30px;
-
     border-radius: 30px;
-
     text-decoration: none;
+    transition: 0.3s;
+}
+.button:hover {
+    background-color: #555;
+    transform: translateY(-3px);
 }
 
 
@@ -124,6 +134,13 @@ section p {
     border-radius: 15px;
 
     background-color: #f5f5f5;
+
+    transition: 0.3s;
+
+    .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
 }
 
 .card h2 {
@@ -148,10 +165,106 @@ img {
     flex-direction: column;
     align-items: center;
 }
+
 .home-content img {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 25px;
+
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.home-content img:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h2 {
+        font-size: 22px;
+    }
+
+    nav div {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 14px;
+    }
+
+
+    /* HOME */
+
+    #home {
+        min-height: auto;
+        padding: 50px 20px;
+    }
+
+    .home-content {
+    width: 100%;
+    padding: 20px 0;
+    }
+
+    .home-content img {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 20px;
+    }
+
+    #home h1 {
+        font-size: 38px;
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    #home h2 {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    #home p {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 20px auto;
+        max-width: 350px;
+    }
+
+
+    /* OTHER SECTIONS */
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h1 {
+        font-size: 32px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
 }
