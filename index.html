@@ -33,7 +33,7 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <img src="image/myphoto.jpg" alt="My Picture">
 
         <h1>Hi, I'm jurielle 👋</h1>
 
@@ -101,18 +101,48 @@
 
 
     <!-- Contact -->
-    <section id="contact">
+    
+<section id="contact">
+    <h1>Contact Me</h1>
 
-        <h1>Let's Work Together</h1>
+    <p>Have a project in mind? Let's work together!</p>
 
-        <p>
-            Interested in working with me?
-        </p>
+    <form id="contactForm"
+      action="https://formspree.io/f/xvkgdond"
+      method="POST">
+        <label for="name">Name</label>
+        <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
 
-        <a href="mailto:jurielleee@gmail.com" class="contact-button">Contact Me</a>
-        </a>
+        <label for="email">Email</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
 
-    </section>
+        <label for="message">Message</label>
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            rows="5"
+            require></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+
+    <p id="formStatus"></p>
+</section>
+
 <footer>
     <p>© <span id="year"></span> Jurielle. All rights reserved.</p>
 </footer>

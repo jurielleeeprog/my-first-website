@@ -335,3 +335,57 @@ body.dark-mode #contact a {
     z-index: 10;
     cursor: pointer;
 }
+
+/* CONTACT FORM */
+
+#contactForm {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+#contactForm label {
+    font-weight: bold;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#contactForm button {
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: #666;
+}
+
+#formStatus {
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* DARK MODE FORM */
+
+body.dark-mode #contactForm input,
+body.dark-mode #contactForm textarea {
+    background-color: #222;
+    color: white;
+    border-color: #555;
+}
