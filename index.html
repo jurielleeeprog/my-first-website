@@ -21,6 +21,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
         
         <button id="darkModeButton">🌙 Dark Mode</button>
@@ -33,7 +34,7 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <img src="image/myphoto.jpg" alt="My Picture">
 
         <h1>Hi, I'm jurielle 👋</h1>
 
@@ -98,6 +99,104 @@
         </div>
 
     </section>
+
+    <section id="projects">
+
+    <h1>My Projects</h1>
+
+    <p class="projects-intro">
+        Here are some examples of my work.
+    </p>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+
+    <img src="projects/social-media.jpg"
+         alt="Social Media Content Project">
+
+    <h2>Social Media Content</h2>
+
+    <p>
+        Social media content created for engaging and
+        professional online presence.
+    </p>
+
+    <button
+    class="project-button"
+    onclick="openProject(
+        'projects/social-media.jpg',
+        'Social Media Content',
+        'A social media design created for engaging and professional online content.'
+    )">
+    View Project
+</button>
+
+</div>
+
+        <div class="project-card">
+
+    <img src="projects/video-editing.jpg"
+          alt="Video Editing Project">
+
+            <h2>Video Editing</h2>
+            <p>
+                Short-form videos edited for Reels,
+                TikTok, and social media content.
+            </p>
+    
+    <button
+    class="project-button"
+    onclick="openProject(
+        'projects/video-editing.jpg',
+        'Video Editing',
+        'Short-form video content edited for Reels, TikTok, and social media.'
+    )">
+    View Project
+</button>
+
+        </div>
+
+        <div class="project-card">
+
+    <img src="projects/canva-design.jpg"
+     alt="Canva Design Project">      
+
+            <h2>Canva Designs</h2>
+            <p>
+                Clean and engaging graphics created
+                for social media and marketing.
+            </p>
+
+    <button
+    class="project-button"
+    onclick="openProject(
+        'projects/canva-design.jpg',
+        'Canva Designs',
+        'Clean and engaging graphics created for social media and marketing.'
+    )">
+    View Project
+</button>
+
+        </div>
+
+    </div>
+<div id="projectModal" class="project-modal" onclick="closeProject()">
+
+    <div class="modal-content" onclick="event.stopPropagation()">
+
+        <button class="close-modal" onclick="closeProject()">✕</button>
+
+        <img id="modalImage" src="" alt="Project Preview">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+</section>
 
 
     <!-- Contact -->

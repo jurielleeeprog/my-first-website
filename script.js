@@ -96,3 +96,20 @@ if (contactForm) {
 
     });
 }
+const projectModal = document.getElementById("projectModal");
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+
+function openProject(image, title, description) {
+
+    modalImage.src = image;
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+
+    projectModal.classList.add("show");
+}
+
+function closeProject() {
+    projectModal.classList.remove("show");
+}
