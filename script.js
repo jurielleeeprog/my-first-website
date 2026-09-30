@@ -102,14 +102,29 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 
 function openProject(image, title, description) {
-
     modalImage.src = image;
     modalTitle.textContent = title;
     modalDescription.textContent = description;
 
     projectModal.classList.add("show");
+    document.body.classList.add("modal-open");
 }
 
 function closeProject() {
     projectModal.classList.remove("show");
+    document.body.classList.remove("modal-open");
 }
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        closeProject();
+    }
+
+});
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeProject();
+    }
+});
