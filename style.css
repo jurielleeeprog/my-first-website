@@ -330,6 +330,7 @@ body.dark-mode #contact a {
 #skills,
 #services,
 #projects,
+#why-me,
 #contact {
     scroll-margin-top: 100px;
 }
@@ -812,6 +813,7 @@ body.dark-mode .contact-links a:hover {
     #skills,
     #services,
     #projects,
+    #why-me,
     #contact {
         padding-left: 25px;
         padding-right: 25px;
@@ -952,4 +954,84 @@ body.dark-mode .project-result {
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+/* DAY 14 - WHY WORK WITH ME */
+
+#why-me {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.why-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.why-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.why-card {
+    width: 260px;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+}
+
+.why-card h2 {
+    font-size: 19px;
+    margin-bottom: 15px;
+}
+
+.why-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* DARK MODE */
+
+body.dark-mode .why-card {
+    background-color: #222;
+    color: white;
+}
+/* WHY ME CTA */
+
+.why-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.why-cta p {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.why-cta .button {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 25px;
+}
+
+body.dark-mode .why-cta {
+    color: white;
+}
+/* CONTACT INTRO */
+
+.contact-intro {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+    font-size: 16px;
 }
