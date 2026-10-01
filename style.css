@@ -328,6 +328,8 @@ body.dark-mode #contact a {
 }
 #about,
 #skills,
+#experience,
+#work-approach,
 #services,
 #projects,
 #why-me,
@@ -811,6 +813,8 @@ body.dark-mode .contact-links a:hover {
 
     #about,
     #skills,
+    #experience,
+    #work-approach,
     #services,
     #projects,
     #why-me,
@@ -1034,4 +1038,291 @@ body.dark-mode .why-cta {
     margin: 0 auto 25px;
     line-height: 1.7;
     font-size: 16px;
+}
+/* DAY 15 - EXPERIENCE SECTION */
+
+#experience {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8f6f2;
+}
+
+.experience-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.experience-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.experience-card {
+    width: 280px;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateY(-7px);
+}
+
+.experience-date {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+.experience-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.experience-card h3 {
+    font-size: 14px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    opacity: 0.75;
+}
+
+.experience-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* EXPERIENCE DARK MODE */
+
+body.dark-mode #experience {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .experience-card {
+    background-color: #222;
+    color: white;
+}
+.experience-date {
+    padding: 6px 10px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    color: #333;
+}
+
+body.dark-mode .experience-date {
+    background-color: #444;
+    color: white;
+}
+.experience-card h2 {
+    min-height: 50px;
+}
+
+.experience-card h3 {
+    min-height: 45px;
+}
+
+.experience-card p {
+    margin-top: 0;
+}
+/* DAY 16 - SERVICE LISTS */
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    text-align: left;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.service-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.services .card {
+    text-align: left;
+}
+
+.services .card h2 {
+    text-align: center;
+}
+
+.services .card > p {
+    text-align: center;
+}
+/* DAY 16 - EVEN SERVICE CARDS */
+
+.services {
+    align-items: stretch;
+}
+
+.services .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.services .card h2 {
+    min-height: 50px;
+}
+
+.services .card > p {
+    min-height: 70px;
+}
+
+.services .service-list {
+    margin-top: 10px;
+}
+/* DAY 16 - SERVICES MOBILE */
+
+@media (max-width: 768px) {
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .services .card {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+
+    .services .card h2 {
+        min-height: auto;
+    }
+
+    .services .card > p {
+        min-height: auto;
+    }
+
+    .service-list {
+        width: 100%;
+    }
+}
+/* DAY 17 - HOW I WORK */
+
+#work-approach {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.work-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.7;
+}
+
+.work-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.work-card {
+    width: 260px;
+    padding: 30px 25px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-7px);
+}
+
+.work-number {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    padding: 7px 11px;
+    background-color: #eeeeee;
+    border-radius: 20px;
+}
+
+.work-card h2 {
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.work-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* DARK MODE */
+
+body.dark-mode .work-card {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .work-number {
+    background-color: #444;
+    color: white;
+}
+/* DAY 17 - HOW I WORK MOBILE */
+
+@media (max-width: 768px) {
+
+    #work-approach {
+        padding: 60px 25px;
+        box-sizing: border-box;
+    }
+
+    .work-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .work-card {
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+    }
+}
+/* DAY 17 - HOW I WORK CTA */
+
+.work-cta {
+    margin-top: 45px;
+    text-align: center;
+}
+
+.work-cta p {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.work-cta .button {
+    display: inline-block;
+    margin: 0;
+    padding: 12px 25px;
 }
