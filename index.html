@@ -35,7 +35,7 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <img src="image/myphoto.jpg" alt="My Picture">
 
     <p class="hero-label">VIRTUAL ASSISTANT • SOCIAL MEDIA MANAGER • ADMIN SUPPORT</p>
         <h1>Hi, I'm Jurielle 👋</h1>
@@ -161,7 +161,7 @@
 
         <div class="project-card">
 
-    <img src="social-media.jpg"
+    <img src="projects/social-media.jpg"
          alt="Social Media Content Project">
 
          <span class="project-category">SOCIAL MEDIA</span>
@@ -173,10 +173,18 @@
         professional online presence.
     </p>
 
+<p class="project-work">
+    <strong>What I Did:</strong>
+    Short-form editing, captions, pacing, and transitions.
+</p>
+    <p class="project-tools">
+    <strong>Tools:</strong> Canva
+</p>
+
     <button
     class="project-button"
     onclick="openProject(
-        'social-media.jpg',
+        'projects/social-media.jpg',
         'Social Media Content',
         'A social media design created for engaging and professional online content.'
     )">
@@ -187,7 +195,7 @@
 
         <div class="project-card">
 
-    <img src="video-editing.jpg"
+    <img src="projects/video-editing.jpg"
           alt="Video Editing Project">
 
           <span class="project-category">VIDEO EDITING</span>
@@ -197,13 +205,22 @@
                 Short-form videos edited for Reels,
                 TikTok, and social media content.
             </p>
-    
+        
+    <p class="project-work">
+    <strong>What I Did:</strong>
+    Short-form editing, captions, pacing, and transitions.
+</p>
+
+    <p class="project-tools">
+    <strong>Tools:</strong> CapCut
+</p>
+
     <button
     class="project-button"
-    onclick="openProject(
-        'video-editing.jpg',
+    onclick="openVideoProject(
+        'videos/salesperson_edit.mp4',
         'Video Editing',
-        'Short-form video content edited for Reels, TikTok, and social media.'
+        'Short-form video edited for social media with captions, pacing, and transitions.'
     )">
     View Project
 </button>
@@ -212,7 +229,7 @@
 
         <div class="project-card">
 
-    <img src="canva-design.jpg"
+    <img src="projects/canva-design.jpg"
      alt="Canva Design Project">      
 
      <span class="project-category">GRAPHIC DESIGN</span>
@@ -223,10 +240,19 @@
                 for social media and marketing.
             </p>
 
+    <p class="project-work">
+    <strong>What I Did:</strong>
+    Graphic design, layout, typography, and visual styling.
+</p>
+
+    <p class="project-tools">
+    <strong>Tools:</strong> Canva
+</p>
+
     <button
     class="project-button"
     onclick="openProject(
-        'canva-design.jpg',
+        'projects/canva-design.jpg',
         'Canva Designs',
         'Clean and engaging graphics created for social media and marketing.'
     )">
@@ -243,6 +269,11 @@
         <button class="close-modal" onclick="closeProject()">✕</button>
 
         <img id="modalImage" src="" alt="Project Preview">
+
+        <video id="modalVideo" controls>
+    <source id="modalVideoSource" src="" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
         <h2 id="modalTitle"></h2>
 

@@ -100,8 +100,17 @@ const projectModal = document.getElementById("projectModal");
 const modalImage = document.getElementById("modalImage");
 const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
+const modalVideo = document.getElementById("modalVideo");
+const modalVideoSource = document.getElementById("modalVideoSource");
 
 function openProject(image, title, description) {
+
+    modalVideo.pause();
+modalVideo.style.display = "none";
+modalVideoSource.src = "";
+
+modalImage.style.display = "block";
+
     modalImage.src = image;
     modalTitle.textContent = title;
     modalDescription.textContent = description;
@@ -110,7 +119,26 @@ function openProject(image, title, description) {
     document.body.classList.add("modal-open");
 }
 
+function openVideoProject(video, title, description) {
+
+    modalImage.style.display = "none";
+    modalVideo.style.display = "block";
+
+    modalVideoSource.src = video;
+    modalVideo.load();
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+
+    projectModal.classList.add("show");
+    document.body.classList.add("modal-open");
+}
+
 function closeProject() {
+
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+
     projectModal.classList.remove("show");
     document.body.classList.remove("modal-open");
 }
