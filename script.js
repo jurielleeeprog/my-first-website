@@ -105,13 +105,15 @@ const modalVideoSource = document.getElementById("modalVideoSource");
 
 function openProject(image, title, description) {
 
+    // Stop and hide video
     modalVideo.pause();
-modalVideo.style.display = "none";
-modalVideoSource.src = "";
+    modalVideo.style.display = "none";
+    modalVideoSource.src = "";
 
-modalImage.style.display = "block";
-
+    // Show image
+    modalImage.style.display = "block";
     modalImage.src = image;
+
     modalTitle.textContent = title;
     modalDescription.textContent = description;
 
