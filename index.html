@@ -35,18 +35,28 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <img src="image/myphoto.jpg" alt="My Picture">
 
-        <h1>Hi, I'm jurielle 👋</h1>
+    <p class="hero-label">VIRTUAL ASSISTANT • SOCIAL MEDIA MANAGER • ADMIN SUPPORT</p>
+        <h1>Hi, I'm Jurielle 👋</h1>
 
         <h2>Virtual Assistant & Social Media Assistant</h2>
 
         <p>
-            I help businesses stay organized, manage social media,
-            and get things done efficiently.
-        </p>
+    I help businesses stay organized, manage social media,
+    and handle day-to-day tasks efficiently.
+</p>
 
-        <a href="#contact" class="button">Hire Me</a>
+        <div class="home-buttons">
+    <a href="#contact" class="button" id="hireButton">Hire Me</a>
+    <a href="#projects" class="button secondary-button">View My Work</a>
+    <a href="Jurielle_Tacla_Resume.pdf"
+   class="button secondary-button"
+   target="_blank">
+    View Resume
+</a>
+
+</div>
 
     </div>
 
@@ -65,6 +75,24 @@
             with experience in administrative support,
             social media, bookkeeping, and customer service.
         </p>
+<div class="about-highlights">
+
+    <div class="highlight">
+        <strong>Organized</strong>
+        <span>Detail-oriented and reliable</span>
+    </div>
+
+    <div class="highlight">
+        <strong>Creative</strong>
+        <span>Social media and Canva content</span>
+    </div>
+
+    <div class="highlight">
+        <strong>Adaptable</strong>
+        <span>Quick to learn new tools</span>
+    </div>
+
+</div>
 
     </section>
 <!-- Skills -->
@@ -133,8 +161,10 @@
 
         <div class="project-card">
 
-    <img src="social-media.jpg"
+    <img src="projects/social-media.jpg"
          alt="Social Media Content Project">
+
+         <span class="project-category">SOCIAL MEDIA</span>
 
     <h2>Social Media Content</h2>
 
@@ -146,7 +176,7 @@
     <button
     class="project-button"
     onclick="openProject(
-        'social-media.jpg',
+        'projects/social-media.jpg',
         'Social Media Content',
         'A social media design created for engaging and professional online content.'
     )">
@@ -157,8 +187,10 @@
 
         <div class="project-card">
 
-    <img src="video-editing.jpg"
+    <img src="projects/video-editing.jpg"
           alt="Video Editing Project">
+
+          <span class="project-category">VIDEO EDITING</span>
 
             <h2>Video Editing</h2>
             <p>
@@ -169,7 +201,7 @@
     <button
     class="project-button"
     onclick="openProject(
-        'video-editing.jpg',
+        'projects/video-editing.jpg',
         'Video Editing',
         'Short-form video content edited for Reels, TikTok, and social media.'
     )">
@@ -180,8 +212,10 @@
 
         <div class="project-card">
 
-    <img src="canva-design.jpg"
+    <img src="projects/canva-design.jpg"
      alt="Canva Design Project">      
+
+     <span class="project-category">GRAPHIC DESIGN</span>
 
             <h2>Canva Designs</h2>
             <p>
@@ -192,7 +226,7 @@
     <button
     class="project-button"
     onclick="openProject(
-        'canva-design.jpg',
+        'projects/canva-design.jpg',
         'Canva Designs',
         'Clean and engaging graphics created for social media and marketing.'
     )">
@@ -226,6 +260,20 @@
     <h1>Contact Me</h1>
 
     <p>Have a project in mind? Let's work together!</p>
+
+    <div class="contact-links">
+
+    <a href="#contactForm">
+    Send Me a Message
+    </a>
+
+    <a href="https://www.linkedin.com/in/jurielle-tacla"
+   target="_blank"
+   rel="noopener noreferrer">
+    LinkedIn
+</a>
+
+</div>
 
     <form id="contactForm"
       action="https://formspree.io/f/xvkgdond"

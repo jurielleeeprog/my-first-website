@@ -9,6 +9,7 @@ html {
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #222;
 }
 
@@ -609,6 +610,212 @@ body.dark-mode .skill:hover {
         padding: 12px 18px;
         font-size: 13px;
         text-align: center;
+    }
+
+}
+/* DAY 10 - PROFESSIONAL POLISH */
+
+section h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+section > p {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about p {
+    max-width: 700px;
+    line-height: 1.8;
+}
+#about,
+#skills,
+#services,
+#projects,
+#contact {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+/* SECONDARY HOME BUTTON */
+
+.secondary-button {
+    background-color: transparent;
+    color: #222;
+    border: 2px solid #222;
+    margin-left: 10px;
+}
+
+.secondary-button:hover {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .secondary-button {
+    color: white;
+    border-color: white;
+}
+
+body.dark-mode .secondary-button:hover {
+    background-color: white;
+    color: #222;
+}
+/* HOME BUTTONS */
+
+.home-content .button {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.secondary-button {
+    margin-left: 0px;
+}
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.home-buttons .button {
+    margin: 0;
+}
+.hero-label {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    opacity: 0.7;
+}
+/* ABOUT HIGHLIGHTS */
+
+.about-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.highlight {
+    width: 210px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.highlight strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.highlight span {
+    font-size: 14px;
+    opacity: 0.75;
+}
+
+body.dark-mode .highlight {
+    border-color: #444;
+}
+/* PROJECT CATEGORY */
+
+.project-category {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: #eeeeee;
+    color: #333;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+body.dark-mode .project-category {
+    background-color: #444;
+    color: white;
+}
+/* CONTACT LINKS */
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+
+.contact-links a {
+    padding: 10px 20px;
+    border: 1px solid #222;
+    border-radius: 25px;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background-color: #222;
+    color: white;
+}
+
+body.dark-mode .contact-links a {
+    border-color: white;
+    color: white;
+}
+
+body.dark-mode .contact-links a:hover {
+    background-color: white;
+    color: #222;
+}
+/* HOME BUTTONS - MOBILE */
+
+@media (max-width: 768px) {
+
+    .home-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .home-buttons .button {
+        width: 200px;
+        max-width: 90%;
+        text-align: center;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+}
+@media (max-width: 768px) {
+
+    .home-content p {
+        width: 90%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+/* MOBILE SECTION SPACING */
+
+@media (max-width: 768px) {
+
+    #about,
+    #skills,
+    #services,
+    #projects,
+    #contact {
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: border-box;
     }
 
 }
