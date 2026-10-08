@@ -102,59 +102,63 @@ const modalTitle = document.getElementById("modalTitle");
 const modalDescription = document.getElementById("modalDescription");
 const modalVideo = document.getElementById("modalVideo");
 const modalVideoSource = document.getElementById("modalVideoSource");
-
 function openProject(image, title, description) {
-
-    // Stop and hide video
-    modalVideo.pause();
-    modalVideo.style.display = "none";
-    modalVideoSource.src = "";
-
-    // Show image
-    modalImage.style.display = "block";
-    modalImage.src = image;
-
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-
-    projectModal.classList.add("show");
-    document.body.classList.add("modal-open");
+  modalVideo.pause(); modalVideo.style.display = "none";
+  modalVideoSource.removeAttribute("src"); modalVideo.load();
+  modalImage.style.display = "block"; modalImage.src = image;
+  modalTitle.textContent = title; modalDescription.textContent = description;
+  projectModal.showModal(); document.body.classList.add("modal-open");
 }
-
 function openVideoProject(video, title, description) {
-
-    modalImage.style.display = "none";
-    modalVideo.style.display = "block";
-
-    modalVideoSource.src = video;
-    modalVideo.load();
-
-    modalTitle.textContent = title;
-    modalDescription.textContent = description;
-
-    projectModal.classList.add("show");
-    document.body.classList.add("modal-open");
+  modalImage.style.display = "none"; modalVideo.style.display = "block";
+  modalVideoSource.src = video; modalVideo.load();
+  modalTitle.textContent = title; modalDescription.textContent = description;
+  projectModal.showModal(); document.body.classList.add("modal-open");
 }
-
-function closeProject() {
-
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-
-    projectModal.classList.remove("show");
-    document.body.classList.remove("modal-open");
-}
-
-document.addEventListener("keydown", function(event) {
-
-    if (event.key === "Escape") {
-        closeProject();
-    }
-
+function closeProject() { projectModal.close(); }
+projectModal.addEventListener("close", () => {
+  modalVideo.pause(); document.body.classList.remove("modal-open");
 });
+projectModal.addEventListener("click", (event) => {
+  if (event.target !== projectModal) return;
+  const r = projectModal.getBoundingClientRect();
+  if (event.clientX < r.left || event.clientX > r.right || event.clientY < r.top || event.clientY > r.bottom) closeProject();
+});
+menuButton.addEventListener("click", () => {
+ const open = navLinks.classList.contains("show");
+ menuButton.setAttribute("aria-expanded", String(open));
+ menuButton.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+});
+document.querySelectorAll(".nav-links a").forEach(link => link.addEventListener("click", () => menuButton.setAttribute("aria-expanded", "false")));
+// Lalagyan ng buong project description sa popup
+let projectDetails = document.querySelector(".modal-details");
 
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        closeProject();
-    }
+if (!projectDetails) {
+  projectDetails = document.createElement("div");
+  projectDetails.className = "modal-details";
+
+  document
+    .getElementById("modalDescription")
+    .insertAdjacentElement("afterend", projectDetails);
+}
+
+// Kunin ang details ng project na pinindot
+document.querySelectorAll(".project-button").forEach((button) => {
+  button.addEventListener(
+    "click",
+    () => {
+      const card = button.closest(".project-card");
+
+      projectDetails.replaceChildren();
+
+      card
+        .querySelectorAll(
+          ".project-goal, .project-work, .project-tools, .project-result"
+        )
+        .forEach((detail) => {
+          projectDetails.appendChild(detail.cloneNode(true));
+        });
+    },
+    true
+  );
 });

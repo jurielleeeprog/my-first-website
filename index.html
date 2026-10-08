@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -13,19 +13,19 @@
 
     <!-- Navigation -->
     <nav>
-    <h2>Jurielle</h2>
+    <a class="logo" href="#home">Jurielle<span>.</span></a>
 
-    <button class="menu-button" id="menuButton">☰</button>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
 
     <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#work-approach">How I Work</a>
+        
+        
+        
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
-        <a href="#why-me">Why Me</a>
+        
         <a href="#contact">Contact</a>
         
         <button id="darkModeButton">🌙 Dark Mode</button>
@@ -38,46 +38,57 @@
 
     <div class="home-content">
 
-        <img src="myphoto.jpg" alt="My Picture">
+        <div class="hero-copy">
 
     <p class="hero-label">VIRTUAL ASSISTANT • SOCIAL MEDIA MANAGER • ADMIN SUPPORT</p>
-        <h1>Hi, I'm Jurielle 👋</h1>
+        <h1>Good content.<br>Less on<br><em>your plate.</em></h1>
 
-        <h2>Virtual Assistant & Social Media Assistant</h2>
+        <h2>Hi, I’m Jurielle.</h2>
 
         <p>
-    I help businesses stay organized, manage social media,
-    and handle day-to-day tasks efficiently.
+    I turn ideas into content and keep the behind-the-scenes details in order, so you have more room to focus on your business.
 </p>
 
         <div class="home-buttons">
     <a href="#contact" class="button" id="hireButton">Hire Me</a>
     <a href="#projects" class="button secondary-button">View My Work</a>
-    <a href="Jurielle_Tacla.pdf"
+    <a href="Jurielle_Tacla_Resume.pdf"
    class="button secondary-button"
-   target="_blank">
+   target="_blank" rel="noopener noreferrer">
     View Resume
 </a>
 
 </div>
 
     </div>
-
+<div class="hero-photo-card"><img src="image/myphoto.jpg" alt="Jurielle Tacla"><p>Creative hands. Organized mind.</p></div>
+</div>
 </section>
-
-    </section>
 
 
     <!-- About -->
     <section id="about">
 
-        <h1>About Me</h1>
+        <p class="eyebrow">ABOUT ME</p><h2 class="section-title">The person behind <em>the little details.</em></h2>
 
         <p>
-            I'm a reliable and detail-oriented professional
-            with experience in administrative support,
-            social media, bookkeeping, and customer service.
-        </p>
+  A detail-oriented virtual assistant based in Batangas,
+  Philippines, with experience in social media assistance,
+  bookkeeping, administrative tasks, and customer support.
+</p>
+
+<p>
+  I create captions, reels, research, Canva graphics,
+  and CapCut edits. My bookkeeping background has taught
+  me to work carefully with financial records, payroll,
+  and spreadsheets.
+</p>
+
+<p>
+  I enjoy work that brings creativity and organization
+  together. I’m always willing to learn a new process
+  and make the next draft better.
+</p>
 <div class="about-highlights">
 
     <div class="highlight">
@@ -101,28 +112,29 @@
 <!-- Skills -->
 <section id="skills">
 
-    <h1>My Skills</h1>
+    <p class="eyebrow">MY SKILLS & TOOLS</p><h2 class="section-title">Creative tools. <em>Practical skills.</em></h2>
 
     <p class="skills-intro">
         Here are some of the tools and skills I use in my work.
     </p>
 
     <div class="skills-container">
-        <div class="skill">Virtual Assistance</div>
-        <div class="skill">Social Media Management</div>
+        <div class="skill">Administrative Support</div>
+        <div class="skill">Social Media Content Creation</div>
+        <div class="skill">Video Editing</div>
+        <div class="skill">Caption Writing</div>
+        <div class="skill">Data Entry</div>
         <div class="skill">Canva</div>
         <div class="skill">CapCut</div>
         <div class="skill">Microsoft Excel</div>
         <div class="skill">Google Sheets</div>
-        <div class="skill">Data Entry</div>
-        <div class="skill">Bookkeeping</div>
     </div>
 
 </section>
 
 <section id="experience">
 
-    <h1>My Experience</h1>
+    <p class="eyebrow">MY EXPERIENCE</p><h2 class="section-title">A background in <em>getting things done.</em></h2>
 
     <p class="experience-intro">
         My experience includes social media support,
@@ -184,7 +196,7 @@
 
 <section id="work-approach">
 
-    <h1>How I Work</h1>
+    <p class="eyebrow">HOW I WORK</p><h2 class="section-title">Clear steps. <em>Thoughtful work.</em></h2>
 
     <p class="work-intro">
         I focus on clear communication, organized workflows,
@@ -230,7 +242,7 @@
     <!-- Services -->
     <section id="services">
 
-        <h1>My Services</h1>
+        <p class="eyebrow">MY SERVICES</p><h2 class="section-title">Consider it <em>taken care of.</em></h2>
 
         <p class="services-intro">
     I provide reliable support to help businesses stay organized,
@@ -300,7 +312,7 @@
 
     <section id="projects">
 
-    <h1>My Projects</h1>
+    <p class="eyebrow">MY PROJECTS</p><h2 class="section-title">Creative meets <em>practical.</em></h2>
 
     <p class="projects-intro">
         Here are some examples of my work.
@@ -310,10 +322,13 @@
 
         <div class="project-card">
 
-    <img src="social-media.jpg"
+    <img src="projects/social-media.jpg"
          alt="Social Media Content Project">
+        
+         <span class="project-number">PROJECT 01</span>
 
          <span class="project-category">SOCIAL MEDIA</span>
+         <span class="project-status">PORTFOLIO SAMPLE</span>
 
     <h2>Social Media Content</h2>
 
@@ -345,7 +360,7 @@
     <button
     class="project-button"
     onclick="openProject(
-        'social-media.jpg',
+        'projects/social-media.jpg',
         'Social Media Content',
         'A social media design created for engaging and professional online content.'
     )">
@@ -356,10 +371,13 @@
 
         <div class="project-card">
 
-    <img src="video-editing.jpg"
+    <img src="projects/video-editing.jpg"
           alt="Video Editing Project">
 
+          <span class="project-number">PROJECT 02</span>
+
           <span class="project-category">VIDEO EDITING</span>
+          <span class="project-status">PORTFOLIO SAMPLE</span>
 
             <h2>Video Editing</h2>
             <p>
@@ -390,7 +408,7 @@
     <button
     class="project-button"
     onclick="openVideoProject(
-        'salesperson_editing.mp4',
+        'videos/salesperson_editing.mp4',
         'Video Editing',
         'Short-form video edited for social media with captions, pacing, and transitions.'
     )">
@@ -401,10 +419,13 @@
 
         <div class="project-card">
 
-    <img src="canva-design.jpg"
+    <img src="projects/canva-design.jpg"
          alt="Canva Design Project">
 
+         <span class="project-number">PROJECT 03</span>
+
     <span class="project-category">GRAPHIC DESIGN</span>
+    <span class="project-status">PORTFOLIO SAMPLE</span>
 
     <h2>Canva Designs</h2>
 
@@ -437,7 +458,7 @@
     <button
         class="project-button"
         onclick="openProject(
-            'canva-design.jpg',
+            'projects/canva-design.jpg',
             'Canva Designs',
             'Clean and engaging graphics created for social media and marketing.'
         )">
@@ -446,12 +467,17 @@
 
 </div>
 
+<div class="projects-cta">
+    <p>Interested in working together?</p>
+    <a href="#contact" class="button">Let's Work Together</a>
+</div>
+
     </div>
-<div id="projectModal" class="project-modal" onclick="closeProject()">
+<dialog id="projectModal" class="project-modal" aria-labelledby="modalTitle">
 
-    <div class="modal-content" onclick="event.stopPropagation()">
+    <div class="modal-content">
 
-        <button class="close-modal" onclick="closeProject()">✕</button>
+        <button aria-label="Close project" class="close-modal" onclick="closeProject()">✕</button>
 
         <img id="modalImage" src="" alt="Project Preview">
 
@@ -466,12 +492,12 @@
 
     </div>
 
-</div>
+</dialog>
 </section>
 
 <section id="why-me">
 
-    <h1>Why Work With Me</h1>
+    <p class="eyebrow">WHY WORK WITH ME</p><h2 class="section-title">Care in <em>every little detail.</em></h2>
 
     <p class="why-intro">
         I bring a combination of organization, creativity,
@@ -505,10 +531,6 @@
         </div>
 
     </div>
-            </div>
-
-    </div>
-
     <div class="why-cta">
         <p>Looking for reliable support for your business?</p>
 
@@ -519,18 +541,35 @@
 
 </section>
 
-</section>
-
     <!-- Contact -->
     
 <section id="contact">
-    <h1>Contact Me</h1>
+    <p class="eyebrow">CONTACT ME</p><h2 class="section-title">Let’s make room for <em>your next idea.</em></h2>
 
     <p class="contact-intro">
     Need help with social media, administrative tasks,
     or day-to-day business support? Send me a message
     and let's discuss how I can help.
 </p>
+
+<div class="contact-details">
+
+    <div class="contact-detail">
+        <strong>Services</strong>
+        <span>Virtual Assistance • Social Media • Data Entry • Canva Design</span>
+    </div>
+
+    <div class="contact-detail">
+        <strong>Work Setup</strong>
+        <span>Remote Support</span>
+    </div>
+
+    <div class="contact-detail">
+        <strong>Let's Connect</strong>
+        <span>Send me a message below to discuss your project.</span>
+    </div>
+
+</div>
 
     <div class="contact-links">
 
@@ -544,6 +583,14 @@
     LinkedIn
 </a>
 
+</div>
+
+    <div class="form-heading">
+    <h2>Send Me a Message</h2>
+    <p>
+        Tell me a little about the support you need,
+        and I'll get back to you as soon as I can.
+    </p>
 </div>
 
     <form id="contactForm"
@@ -571,15 +618,15 @@
         <textarea
             id="message"
             name="message"
-            placeholder="Write your message here..."
+            placeholder="Tell me about the tasks or support you need..."
             rows="5"
-            require></textarea>
+            required></textarea>
 
         <button type="submit">Send Message</button>
 
     </form>
 
-    <p id="formStatus"></p>
+    <p id="formStatus" role="status"></p>
 </section>
 
 <footer>
